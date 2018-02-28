@@ -1,0 +1,39 @@
+
+ -- Leer un archivo --
+
+y = wavread (filename)
+[y, fs, nbits] = wavread (filename)
+[…] = wavread (filename, n)
+[…] = wavread (filename, [n1 n2])
+[…] = wavread (…, datatype)
+sz = wavread (filename, "size")
+[n_samp, n_chan] = wavread (filename, "size")
+
+"y" se convierte en el archivo indicado con "filename", "n" implica la cantidad de muestras, o "n1" y "n2" el inicio y final de las muestras.
+Si se envía el parámetro "size" se devuelve el tamaño del archivo y no las muestras.
+"fs" indica la frecuencia de muestreo del archivo de audio, y "nbits" indica la cantidad de bits por muestra"
+
+
+ -- Guardar un archivo --
+
+wavwrite (y, filename)
+wavwrite (y, fs, filename)
+wavwrite (y, fs, nbits, filename)
+
+Escribe la señal de audio "y" en el archivo "filename".
+"fs" indica la frecuencia de muestreo del archivo de audio, y "nbits" indica la cantidad de bits por muestra". Los valores por defecto son: "fs" = 8000 Hz y "nbits" = 16 bits por muestra.
+
+
+ -- Reproducir un archivo -- 
+sound (y)
+sound (y, fs)
+sound (y, fs, nbits)
+
+Reproduce la señal de audio "y" en el dispositivo de audio por defecto. 
+"fs" indica la frecuencia de muestreo del archivo de audio, y "nbits" indica la cantidad de bits por muestra". Los valores por defecto son: "fs" = 8000 Hz y "nbits" = 8 bits por muestra.
+
+
+ -- Ejemplo --
+
+y = wavread("bongos1.wav")
+sound(y, 44100)
