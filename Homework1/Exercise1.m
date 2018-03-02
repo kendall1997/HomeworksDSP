@@ -13,7 +13,7 @@ hold on;
 % functions lets generate a graph of a
 % function f(x) = sin(x) in a continuos
 % way.
-% This function reveices a vector with finite
+% This function receives a vector with finite
 % values of the domain.
 function graph = grapher(d)
   plot(sin(d),"k");
