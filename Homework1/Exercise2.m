@@ -30,22 +30,22 @@ y4 = sin(n*pi*f4);
 
 % Draw the first function
 figure;
-plot(n, y1);
+stem(n, y1);
 title('sin(0.01 * pi * n)');
 
 % Draw the secpnd function
 figure;
-plot(n, y2);
+stem(n, y2);
 title('sin(0.02 * pi * n)');
 
 % Draw the third function
 figure;
-plot(n, y3);
+stem(n, y3);
 title('sin(0.05 * pi * n)');
 
 % Draw the fourth function
 figure;
-plot(n, y4);
+stem(n, y4);
 title('sin(0.1 * pi * n)');
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -55,10 +55,10 @@ title('sin(0.1 * pi * n)');
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 figure;
-subplot(2,2,1); p1 = plot(n,y1); title('sin(0.01 * pi * n)');
-subplot(2,2,2); p2 = plot(n,y2); title('sin(0.02 * pi * n)');
-subplot(2,2,3); p3 = plot(n,y3); title('sin(0.05 * pi * n)');
-subplot(2,2,4); p4 = plot(n,y4); title('sin(0.1 * pi * n)');
+subplot(2,2,1); p1 = stem(n,y1); title('sin(0.01 * pi * n)');
+subplot(2,2,2); p2 = stem(n,y2); title('sin(0.02 * pi * n)');
+subplot(2,2,3); p3 = stem(n,y3); title('sin(0.05 * pi * n)');
+subplot(2,2,4); p4 = stem(n,y4); title('sin(0.1 * pi * n)');
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                         %
@@ -68,14 +68,14 @@ subplot(2,2,4); p4 = plot(n,y4); title('sin(0.1 * pi * n)');
 
 figure;
 hold on;
-plot(n,y1,"m");
-plot(n,y2,"w");
-plot(n,y3,"b");
-plot(n,y4,"c");
+stem(n,y1,"m");
+stem(n,y2,"w");
+stem(n,y3,"b");
+stem(n,y4,"c");
 %{
-plot(n,y1,'Color', 'blue');
-plot(n,y2,'Color', 'red');
-plot(n,y3,'Color', 'green');
-plot(n,y4,'Color', 'yellow');
+stem(n,y1,'Color', 'blue');
+stem(n,y2,'Color', 'red');
+stem(n,y3,'Color', 'green');
+stem(n,y4,'Color', 'yellow');
 %}
 hold off;
