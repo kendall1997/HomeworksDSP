@@ -12,7 +12,7 @@
 % alias based on the function y(n) = pi*f*n
 % The demostration is in the PDF attached.
 function next = nextAlias(f0)
-  next = f0 + 2
+  next = f0 + 2;
 end
 
 % This function generates two windows
@@ -25,10 +25,10 @@ end
 % The other window with a superposition of the two discrete functions 
 function graph = grapher(domain,firstFrequency)
   
-  secondFrequency = nextAlias(firstFrequency)
+  secondFrequency = nextAlias(firstFrequency);
 
-  firstFunction = sin(pi*firstFrequency*domain)
-  secondFunction = sin(pi*secondFrequency*domain)
+  firstFunction = sin(pi*firstFrequency*domain);
+  secondFunction = sin(pi*secondFrequency*domain);
 
   figure
   subplot(2,2,1)
@@ -65,7 +65,7 @@ function graph = grapher(domain,firstFrequency)
 end
 
 % Lets generate the domain
-domain = 0:20
+domain = 0:100;
 
 % Set the frecuency
 frequency = 0.4
