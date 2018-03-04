@@ -22,4 +22,4 @@ function create = play(f,t)
   
 end
 
-play(7000,1)
+play(14000,1)
