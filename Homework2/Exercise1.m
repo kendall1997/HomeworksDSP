@@ -38,7 +38,7 @@ h = [2/7 2/7 3/14 1/7 1/14 0];
 
 ROWS = 3;
 COLUMNS = 1;
-x_axis_label = 'Sample N';
+x_axis_label = 'n';
 
 % Definition of the signal x(n)
 graph_title = 'Source Signal: x(n) = {1,0,0,0,0,1}';

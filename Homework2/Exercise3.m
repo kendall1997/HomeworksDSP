@@ -12,28 +12,22 @@ figure('name', 'Exercise #3 - Digital Signal Processing');
 
 % Define a function that calculates the convolution
 % of a signal and a impulse response.
-function convolution = my_conv(f, g)
-  % Transform the vectors f and g in new vectors with the same length 
-  F = [f,zeros(1,length(g))]; 
-  G = [g,zeros(1,length(f))];
+function convolution = my_conv(x, h)
+  X = [x,zeros(1,length(h))]; 
+  H = [h,zeros(1,length(x))];
 
-  % FOR Loop to put the result of convolution between F and G vectors 
-  % in a new vector C. According to the convolution operation characteristics, 
-  % the length of a resultant vector of convolution operation between two vector 
-  % is the sum of vectors length minus 1 
-  for i=1:length(g)+length(f)-1 
-    % Create a new vector C 
-    C(i) = 0; 
-    % FOR Loop to walk through the vector F ang G 
-    for j=1:length(f) 
+  for i=1:length(h)+length(x)-1 
+    O(i) = 0; 
+    for j=1:length(x) 
       if(i-j+1>0) 
-        C(i) = C(i) + F(j) * G(i-j+1); 
-      else 
-      end 
-    end 
+        O(i) = O(i) + X(j) * H(i-j+1); 
+      else
+        1;
+      end
+    end
   end
   
-  convolution = C;
+  convolution = O;
 
 end
 
@@ -64,7 +58,7 @@ h = [2/7 2/7 3/14 1/7 1/14 0];
 
 ROWS = 4;
 COLUMNS = 1;
-x_axis_label = 'Sample N';
+x_axis_label = 'n';
 
 % Definition of the signal x(n)
 graph_title = 'Source Signal: x(n) = {1,0,0,0,0,1}';
