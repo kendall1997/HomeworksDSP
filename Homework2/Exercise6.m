@@ -8,7 +8,7 @@
 
 % Load the package for the xcorr function
 pkg load signal;
-
+%{
 % Window for the signal 1
 figure('name', 'Exercise #6.1 - Digital Signal Processing');
 
@@ -56,15 +56,15 @@ load inputsignal_xn4.mat;
 subplot(2,1,1); p1 = stem(xn); title('xn4');
 subplot(2,1,2); p2 = stem(lag,acor/acor(4001)); 
 title('xcorr(xn4): Muestra un periodo cada 2000');
-
+%}
 % Window for the signal 5
 figure('name', 'Exercise #6.5 - Digital Signal Processing');
 
 load inputsignal_xn5.mat;
 
 % Correlation at 2100
-[acor,lag] = xcorr(xn,xn, 2100);
+[acor,lag] = xcorr(xn,xn, 5000);
 
 subplot(2,1,1); p1 = stem(xn); title('xn5');
-subplot(2,1,2); p2 = stem(lag,(acor/acor(2101))); 
+subplot(2,1,2); p2 = stem(lag,(acor/acor(5001))); 
 title('xcorr(xn5): No tiene periodo, el primer maximo es 314, el siguiente 874');

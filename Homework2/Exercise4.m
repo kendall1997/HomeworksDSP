@@ -51,7 +51,7 @@ endfunction
 % Example with function x_funcion
 a = [1, -3, -4];
 b = [1, -2];
-z = [1, 2, 3];
+z = [1, 2, 3, 4];
 
 
-y(a,b,@x_funcion ,4, z);
+y(a,b,@x_funcion ,5);
