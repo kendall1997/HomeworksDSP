@@ -23,4 +23,4 @@ subplot(2,2,2); p2 = stem(x); title('x(n)');
 subplot(2,2,3); p3 = stem(c); title('x(n)*h(n)');
 subplot(2,2,4); p3 = stem(c2); title('k*h(n)');
 
-% Filtro pasa bajas, con constantes solo devuelve 0
+% Filtro pasa alto, con constantes solo devuelve 0
