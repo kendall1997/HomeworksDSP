@@ -13,10 +13,11 @@ b0 = 1;
 b1 = -0.44721;
 b2 = 0.44721;
 
-f = R + j*I;
 
 R = b0 + b1 * cos(w) + b2 * cos(2*w);
 I = -b1 * sin(w) - b2 * sin(2*w);
+
+f = R + j*I;
 
 H = b0^2 + b1^2 + b2^2 + 2*b0*b1*cos(w) + 2*b0*b2*cos(2*w) + 2*b1*b2;
     
