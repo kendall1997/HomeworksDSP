@@ -28,7 +28,7 @@ function grapherContinuos = grapherContinuos(rows, columns, position, graph_titl
 end
 
 % Windows Title
-figure('name', 'Exercise #4 - Digital Signal Processing');
+figure('name', 'Exercise #6 - Digital Signal Processing');
 
 % Core
 % Lets set the domain
